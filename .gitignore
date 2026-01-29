@@ -1,0 +1,14 @@
+# Java compiled files
+*.class
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# Output folders
+out/
+dist/
+
+.github/
