@@ -1,0 +1,4 @@
+1️⃣ Huffman Coding (Very Important)Classic greedy problem.
+2️⃣ Minimum Platforms (Trains problem) Very common.
+3️⃣ Merge Intervals (Greedy + Sorting)
+4️⃣ Gas Station problem (Leetcode popular)

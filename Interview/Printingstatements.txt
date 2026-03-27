@@ -1,0 +1,12 @@
+System is a final class provided by Java to access system resources.
+out is a static PrintStream object used to send output to the console.
+⚙️ Why out is static?
+Because:
+Console is common for all objects
+No need to create System object
+
+println()
+A method of PrintStream
+Prints data and moves cursor to next line
+
+System.out is a static variable that holds a reference to a PrintStream object; static applies to the reference, not the object itself.

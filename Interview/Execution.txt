@@ -1,0 +1,76 @@
+Java reads → Left to Right
+= works → Right to Left
+&& || → Stop early
+
+int i = 5;
+int x = i++ + ++i;
+System.out.println(i);
+System.out.println(x);
+
+Step-by-step (Left → Right):
+Step 1: i++
+Use = 5
+
+i becomes 6
+
+Step 2: ++i
+i becomes 7
+
+Use = 7
+Step 3:
+x = 5 + 7 = 12
+✅ Output:
+i = 7
+x = 12
+
+| Case              | Direction       |   |                                |
+| ----------------- | --------------- | - | ------------------------------ |
+| Normal Expression | Left → Right ✅  |   |                                |
+| Method Arguments  | Left → Right ✅  |   |                                |
+| ++ / --           | Left → Right ✅  |   |                                |
+| && ,              |                 |   | Left → Right (short-circuit) ✅ |
+| Assignment (=)    | Right → Left ⚠️ |   |                                |
+| Ternary (?:)      | Right → Left ⚠️ |   |                                |
+
+a = b ? c : d = e; =>  work like a = ( b ? c : (d = e) ); not like => (a = b) ? c : (d = e); ❌
+in simple form
+if(b){
+    a = c;
+}else{
+    d = e;
+    a = d;
+}
+
+
+| Operator       | Precedence | Associativity |
+| -------------- | ---------- | ------------- |
+| ?: (ternary)   | Low        | Right → Left  |
+| = (assignment) | Lowest     | Right → Left  |
+Even though grouping is right → left, evaluation is still left → right.
+
+public class Main {
+    public static void main(String[] args) {
+
+        boolean b = false;
+
+        int c = 10;
+        int d = 20;
+        int e = 30;
+
+        int a;
+
+        a = b ? c : d = e;
+
+        System.out.println("a = " + a);
+        System.out.println("d = " + d);
+    }
+}
+
+Case 1: b = true
+a = c = 10
+d = 20 (unchanged)
+
+Case 2: b = false
+d = e = 30
+a = 30
+

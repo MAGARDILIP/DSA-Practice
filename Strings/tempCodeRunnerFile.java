@@ -1,0 +1,1 @@
+ System.out.println(new Interger(10) + new ArrayList<Integer>());

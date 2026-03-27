@@ -1,0 +1,28 @@
+main() must be public so that JVM can access it from anywhere.
+main() is static because JVM does not create an object before calling it.
+main() does not return any value to the JVM, so return type is void.
+
+Why not int or String?
+JVM does not use return value
+Program termination status is handled by OS, not main()
+
+main is a predefined entry point method name for JVM.
+
+String[] args is used to accept command-line arguments from JVM.
+public static void main(String args[])
+public static void main(String... args)
+
+
+❓ Can we overload main()?
+✔ Yes
+public static void main(int x) { }
+
+
+❌ JVM ignores it
+❓ Can child class have its own main()?
+✔ Yes
+But it is not overriding, only hiding.
+
+❓ Can main() be final?
+✔ Yes
+But useless because it’s static anyway.

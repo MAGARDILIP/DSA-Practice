@@ -1,0 +1,87 @@
+| Feature         | String      | StringBuilder | StringBuffer         |
+| --------------- | ----------- | ------------- | -------------------- |
+| Mutability      | ❌ Immutable | ✅ Mutable     | ✅ Mutable            |
+| Changeable?     | No          | Yes           | Yes                  |
+| Thread-Safe     | ❌ No        | ❌ No          | ✅ Yes                |
+| Synchronization | ❌ No        | ❌ No          | ✅ Yes (synchronized) |
+| Performance     | ❌ Slow      | ✅ Fastest     | ⚠️ Medium            |
+| Memory Use      | ❌ More      | ✅ Less        | ⚠️ Medium            |
+| Introduced In   | Java 1.0    | Java 1.5      | Java 1.0             |
+| Package         | java.lang   | java.lang     | java.lang            |
+| String Pool     | ✅ Yes       | ❌ No          | ❌ No                 |
+
+
+| Operation      | Fastest       | Reason           |
+| -------------- | ------------- | ---------------- |
+| Modification   | StringBuilder | No sync, mutable |
+| Multithreading | StringBuffer  | Thread-safe      |
+| Read-only      | String        | Optimized        |
+
+🔹 String
+
+Immutable → Automatically safe ✅
+
+🔹 StringBuilder
+
+Not thread-safe ❌
+
+🔹 StringBuffer
+
+Thread-safe ✅ (synchronized methods)
+
+✅ 5. Reversing in All Three
+🔹 String → No direct reverse ❌
+
+Use:
+
+String s = "Java";
+
+String rev = new StringBuilder(s).reverse().toString();
+
+🔹 StringBuilder → Direct reverse ✅
+StringBuilder sb = new StringBuilder("Java");
+sb.reverse();
+System.out.println(sb); // avaJ
+
+🔹 StringBuffer → Direct reverse ✅
+StringBuffer sb = new StringBuffer("Java");
+sb.reverse();
+
+| Method      | String | StringBuilder | StringBuffer |
+| ----------- | ------ | ------------- | ------------ |
+| length()    | ✅      | ✅             | ✅            |
+| charAt()    | ✅      | ✅             | ✅            |
+| append()    | ❌      | ✅             | ✅            |
+| insert()    | ❌      | ✅             | ✅            |
+| delete()    | ❌      | ✅             | ✅            |
+| replace()   | ❌      | ✅             | ✅            |
+| reverse()   | ❌      | ✅             | ✅            |
+| substring() | ✅      | ✅             | ✅            |
+| toString()  | ✅      | ✅             | ✅            |
+
+| Situation                    | Use           |
+| ---------------------------- | ------------- |
+| Constant text                | String        |
+| Many changes (single thread) | StringBuilder |
+| Many changes (multi thread)  | StringBuffer  |
+| Password / Config            | String        |
+| Loop concatenation           | StringBuilder |
+
+
+✅ == Operator
+
+Compares reference (memory address) of two objects.
+
+Checks whether both variables point to the same object.
+
+✅ equals() Method
+
+Compares content (value/data) of two objects.
+
+Checks whether both objects have the same data (if properly overridden).
+
+String a = new String("Hi");
+String b = new String("Hi");
+
+a == b;        // false (different objects)
+a.equals(b);  // true  (same content)

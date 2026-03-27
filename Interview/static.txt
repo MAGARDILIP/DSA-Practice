@@ -1,0 +1,31 @@
+A static method can directly call only static members
+if we not use static then it will give this error
+Cannot make a static reference to the non-static method
+Static method cannot use =>  this 
+Static block runs before main() 
+Static  methods cannot be overridden They are method-hidden, not overridden.
+
+static {
+    // code here
+}
+Meaning:
+A static block executes when the class is loaded
+It runs before main()
+Runs only once
+
+🔹 Example: Program without main() (Java 8 trick)
+class Test {
+    static {
+        System.out.println("Hello from static block");
+        System.exit(0);
+    }
+}
+
+JVM loads the class
+Static block executes during class loading
+System.exit(0) stops JVM
+JVM never reaches main()
+
+When a static method in child class has same signature as static method in parent class
+It hides the parent method
+No runtime polymorphism

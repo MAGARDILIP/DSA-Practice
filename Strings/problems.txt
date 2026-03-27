@@ -1,0 +1,91 @@
+Find Length of String (without length())
+
+Reverse a String (without reverse())
+
+Check Palindrome (without reverse())
+
+Compare Two Strings (without equals())
+
+Find Substring in String (without indexOf())
+
+Check Anagram (without sort())
+
+Remove Duplicate Characters (without Set)
+
+Count Words in a Sentence (without split())
+
+Find Most Frequent Character (without Map)
+
+Check String Rotation (without contains())
+
+
+🟢 EASY String Interview Problems
+
+Reverse a String
+
+Check Palindrome
+
+Count Vowels and Consonants
+
+Find Length Without length()
+
+Count Occurrence of a Character
+
+Remove Spaces
+
+Compare Two Strings Without equals()
+
+Convert Uppercase to Lowercase (and vice versa)
+
+First Non-Repeating Character
+
+Check if String Contains Only Digits
+
+🟡 MEDIUM String Interview Problems
+
+✔ Find Substring in a String Without Using Built-in Methods
+(Implement your own indexOf())
+
+Check Anagram
+
+Remove Duplicate Characters
+
+Find Longest Word in a Sentence
+
+Reverse Words in a String
+
+Longest Substring Without Repeating Characters
+
+String Compression
+
+Check String Rotation
+
+Count Words in a Sentence
+
+Find Most Frequent Character
+
+Group Anagrams
+
+🔴 HARD String Interview Problems
+
+Longest Palindromic Substring
+
+KMP Pattern Matching
+
+Edit Distance
+
+Minimum Window Substring
+
+Wildcard Pattern Matching
+
+String Interleaving
+
+Word Break Problem
+
+Longest Common Subsequence (LCS)
+
+Rabin-Karp Pattern Matching
+
+Manacher’s Algorithm for Palindrome
+
+
